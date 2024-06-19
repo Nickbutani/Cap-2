@@ -1,0 +1,32 @@
+.home {
+    padding: 20px;
+    text-align: center;
+}
+
+.home-header {
+    margin-bottom: 20px;
+}
+
+.home-content {
+    margin-bottom: 20px;
+}
+
+.story {
+    margin-bottom: 20px;
+}
+
+.home-gallery {
+    margin-top: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-images img {
+    margin: 0 10px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}

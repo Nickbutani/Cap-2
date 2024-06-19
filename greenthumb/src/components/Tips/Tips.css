@@ -1,0 +1,43 @@
+.tipsContainer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .loadingMessage, .errorMessage, .tip {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 10px; /* Add space between tips */
+  }
+  
+  .loadingMessage {
+    font-style: italic;
+  }
+  
+  .errorMessage {
+    color: #f44336; /* Red color for error message */
+  }
+  
+  @media (max-width: 768px) {
+    .tipsContainer {
+      padding: 15px;
+    }
+    
+    .title {
+      font-size: 20px;
+    }
+    
+    .loadingMessage, .errorMessage, .tip {
+      font-size: 16px;
+    }
+  }
+  

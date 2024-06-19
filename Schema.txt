@@ -1,0 +1,64 @@
+           +--------------+   1     M   +-----------------------+
+           |    User      |-------------|        Plant          |
+           +--------------+             +-----------------------+
+           | user_id (PK) |             | plant_id (PK)         |
+           | username     |             | user_id (FK)          |
+           | email        |             | name                  |
+           | password     |             | scientific_name       |
+           +--------------+             | family                |
+                                         | order                 |
+                                         | image_url             |
+                                         +-----------------------+
+                                                  |
+                                                  | 1     M
+                                                  |
+                                                  V
+             +--------------+                +-----------------------+
+             |    Weather   |                |    PestDisease        |
+             +--------------+                +-----------------------+
+             | weather_id (PK)|              | pest_disease_id (PK)  |
+             | user_id (FK)   |              | user_id (FK)          |
+             | location       |              | description           |
+             | temperature    |              | image_url             |
+             | condition      |              | result                |
+             | timestamp      |              | timestamp             |
+             +--------------+                +-----------------------+
+
+
+CREATE TABLE User (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Plant (
+    plant_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES User(user_id),
+    name VARCHAR(255) NOT NULL,
+    scientific_name VARCHAR(255),
+    family VARCHAR(255),
+    order VARCHAR(255),
+    image_url VARCHAR(255)
+);
+
+
+CREATE TABLE Weather (
+    weather_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES User(user_id),
+    location VARCHAR(255) NOT NULL,
+    temperature FLOAT NOT NULL,
+    condition VARCHAR(255) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE PestDisease (
+    pest_disease_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES User(user_id),
+    description TEXT NOT NULL,
+    image_url VARCHAR(255),
+    result TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
