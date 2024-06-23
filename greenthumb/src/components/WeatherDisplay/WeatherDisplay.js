@@ -1,5 +1,3 @@
-// WeatherDisplay.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import './WeatherDisplay.css';
@@ -59,26 +57,26 @@ const WeatherDisplay = () => {
     };
 
     return (
-        <div>
-            <h1>Weather Display</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="weather-container">
+            <h1 className="title">Weather Display</h1>
+            <form onSubmit={handleSubmit} className="weather-form">
                 <label>
                     Enter City Name:
-                    <input type="text" value={cityName} onChange={handleChange} />
+                    <input type="text" value={cityName} onChange={handleChange} className="input" />
                 </label>
-                <button type="submit">Get Weather</button>
+                <button type="submit" className="submit-button">Get Weather</button>
             </form>
 
-            {error && <p>{error}</p>}
+            {error && <p className="error-message">{error}</p>}
 
             {weather && weather.current && (
-                <div>
-                    <h2>Current Weather</h2>
-                    <h3>Location: {cityName}</h3> {/* Display entered city name */}
-                    <img src={getWeatherIcon(weather.current.weather_code)} alt="Weather icon" />
-                    <p>Temperature: {weather.current.temperature_2m}°F</p>
-                    <p>Cloud Cover: {weather.current.cloud_cover}%</p>
-                    <p>Wind Speed: {weather.current.wind_speed_10m} mph</p>
+                <div className="weather-info">
+                    <h2 className="subtitle">Current Weather</h2>
+                    <h3 className="location">Location: {cityName}</h3>
+                    <img src={getWeatherIcon(weather.current.weather_code)} alt="Weather icon" className="weather-icon" />
+                    <p className="temperature">Temperature: {weather.current.temperature_2m}°F</p>
+                    <p className="cloud-cover">Cloud Cover: {weather.current.cloud_cover}%</p>
+                    <p className="wind-speed">Wind Speed: {weather.current.wind_speed_10m} mph</p>
                 </div>
             )}
         </div>

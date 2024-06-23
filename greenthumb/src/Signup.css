@@ -1,0 +1,37 @@
+.signup-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-container img{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 500px;
+}
+
+.signup-form{
+    padding: 20px;
+    width: 100%;
+}
+.signup-form h2{
+    font-size: 2rem;
+}
+
+.signup-form form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+    padding: 10px;
+    height: 70%;
+}
+
+.signup-form form input{
+    padding: 10px;
+}
+
+.signup-form form button{
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: auto;
+}

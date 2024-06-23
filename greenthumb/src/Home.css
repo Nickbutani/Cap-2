@@ -1,32 +1,191 @@
 .home {
-    padding: 20px;
     text-align: center;
+  
 }
 
 .home-header {
-    margin-bottom: 20px;
+    
+    position: relative;
 }
 
-.home-content {
-    margin-bottom: 20px;
-}
+
+
 
 .story {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;  
 }
 
-.home-gallery {
+.story img {
+    width: 50%; 
+    height: auto; 
+    margin-left: 20px;
+}
+
+.story-content {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+
+.article-pace{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.article-pace p{
+   padding: 0;
+   margin: 0;
+   font-size: 1.1rem;
+}
+
+.article-pace h2{
+   font-size: 2.2rem;
+   font-weight: 700;
+}
+
+.article-pace img{
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 0;
+}
+
+
+
+
+
+.backgroundpic{
+   width: 100%;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0); 
+    margin: 0;
+    margin-top: -150px;
+}
+
+.farm-tag{
+    width: 100px;
+}
+
+
+
+.urbantag{
+    width: 100px;
+    height: 100px;
+    margin-left: 0;
+}
+
+.benif{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.benefit-divs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 70%;
+   
+}
+
+.benefit-item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #71BC78;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.benefit-item h3 {
+    margin-top: 0;
+    font-size: 1.9em;
+    color: #1a241a;
+}
+
+.benefit-item p {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.benefit-item img{
+    width: 100px;
+}
+
+.get-start {
+    text-align: center;
+    margin-top: 100px;
+    justify-content: center;
+    width: 100%;
+    background-image: url(./Getstart.png);
+    padding:70px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.get-start h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #070907;
+}
+
+.get-start p {
+    margin: 10px 0 20px 0;
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
-.gallery-images {
-    display: flex;
-    justify-content: center;
+.email-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
-.gallery-images img {
-    margin: 0 10px;
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
+.email-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.email-form button:hover {
+    background-color: #45a049;
 }

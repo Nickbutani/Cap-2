@@ -1,43 +1,66 @@
+/* Tips.css */
+
 .tipsContainer {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .loadingMessage, .errorMessage, .tip {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #666;
-    margin-bottom: 10px; /* Add space between tips */
-  }
-  
-  .loadingMessage {
-    font-style: italic;
-  }
-  
-  .errorMessage {
-    color: #f44336; /* Red color for error message */
-  }
-  
-  @media (max-width: 768px) {
-    .tipsContainer {
-      padding: 15px;
-    }
-    
-    .title {
-      font-size: 20px;
-    }
-    
-    .loadingMessage, .errorMessage, .tip {
-      font-size: 16px;
-    }
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.loadingMessage,
+.errorMessage {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.tip {
+  font-size: 1.1em;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 4px solid #4caf50;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.tip:hover {
+  transform: translateX(10px);
+}
+
+.tip:nth-child(odd) {
+  background-color: #e0f7fa;
+  border-left-color: #00897b;
+}
+
+.tip:nth-child(even) {
+  background-color: #ffebee;
+  border-left-color: #d32f2f;
+}
+
+.refreshButton {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refreshButton:hover {
+  background-color: #45a049;
+}
