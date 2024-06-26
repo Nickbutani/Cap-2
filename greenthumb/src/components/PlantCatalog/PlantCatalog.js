@@ -7,7 +7,7 @@ const PlantCatalog = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:5001/api/plants')
+        axios.get('https://greenthumb-mmux.onrender.com/api/plants')
             .then(response => {
                 setPlants(response.data.data);
             })

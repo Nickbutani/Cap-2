@@ -15,7 +15,7 @@ const WeatherDisplay = () => {
 
     const fetchWeather = async (city) => {
         try {
-            const response = await axios.get(`http://localhost:5001/api/weather?location=${encodeURIComponent(city)}`);
+            const response = await axios.get(`https://greenthumb-mmux.onrender.com/api/weather?location=${encodeURIComponent(city)}`);
             console.log('Weather API response:', response.data); // Log the response
             setWeather(response.data);
             setError(null);
