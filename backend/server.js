@@ -14,10 +14,11 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors());
+app.use('/api', routes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/api', routes);
+
 
 
 const geocoder = axios.create({
