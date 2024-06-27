@@ -5,7 +5,7 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 const axios = require('axios');
- // Ensure this path is correct based on your directory structure
+const routes = require('./routes');
 
 dotenv.config(); // Load environment variables from .env file
 
