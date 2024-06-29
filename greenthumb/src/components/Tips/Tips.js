@@ -10,7 +10,7 @@ const Tips = () => {
   const fetchTips = async () => {
     try {
       setLoading(true); // Show loading indicator while fetching new tips
-      const response = await axios.post('https://greenthumb-mmux.onrender.com/api/get-completion', {
+      const response = await axios.post('https://greenthumb-kmir.onrender.com/api/get-completion', {
         model: 'gpt-3.5-turbo-instruct',
         prompt: 'Give me 10 gardening tips',
         max_tokens: 500

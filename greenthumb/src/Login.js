@@ -10,7 +10,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://greenthumb-mmux.onrender.com/api/login', {
+            const response = await axios.post('https://greenthumb-kmir.onrender.com/api/login', {
                 email,
                 password
             });
