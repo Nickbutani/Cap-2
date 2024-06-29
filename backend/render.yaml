@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: greenthumb-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: postgres://wglihlii:STPqHtuqMRCaA1vGbig5Yo5kJ3ceMUrI@stampy.db.elephantsql.com/wglihlii

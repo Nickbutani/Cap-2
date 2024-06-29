@@ -1,14 +1,6 @@
 const { Client } = require('pg');
 
-let DB_URI;
-
-if (process.env.NODE_ENV === 'test') {
-  DB_URI = 'postgresql:///greenthumb_test';
-} else if (process.env.NODE_ENV === 'production') {
-  DB_URI = 'postgres://wglihlii:STPqHtuqMRCaA1vGbig5Yo5kJ3ceMUrI@stampy.db.elephantsql.com/wglihlii';
-} else {
-  DB_URI = 'postgresql:///greenthumb';
-}
+const DB_URI = process.env.DATABASE_URL || 'postgres://wglihlii:STPqHtuqMRCaA1vGbig5Yo5kJ3ceMUrI@stampy.db.elephantsql.com/wglihlii';
 
 let dbConfig = {
   connectionString: DB_URI
