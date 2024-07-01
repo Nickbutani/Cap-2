@@ -29,8 +29,8 @@ const Navbar = () => {
                 <ul className="log-links">
                     {isLoggedIn ? (
                         <>
-                            <li><Link to="/profile">Profile</Link></li>
-                            <li><button onClick={handleLogout}>Logout</button></li>
+                          
+                            <li className="log" ><button onClick={handleLogout}>Logout</button></li>
                         </>
                     ) : (
                         <>
