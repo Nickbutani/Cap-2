@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const db = require('./db');
-
+const { generateToken } = require('./auth'); // Import the function
 
 // Register new user
 router.post('/signup', async (req, res) => {
@@ -20,7 +20,6 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
     console.log('Login request received:', { email, password }); // Log the received request body
@@ -37,7 +36,7 @@ router.post('/login', async (req, res) => {
             if (await bcrypt.compare(password, user.password)) {
                 console.log('Login successful!'); // Log a success message
                 
-                // Generate a token (example: using JWT)
+                // Generate a token
                 const token = generateToken(user);
 
                 // Send the token in the response
@@ -113,6 +112,4 @@ router.delete('/plants/:plant_id', async (req, res) => {
     }
 });
 
-
 module.exports = router;
-
